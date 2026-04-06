@@ -16,6 +16,7 @@ const allowedOrigins = [
   'https://digi-focus.vercel.app',
   'https://digital-focus-frontend.vercel.app',
   'https://digi-focus-frontend.vercel.app',
+  'https://digi-focus-iyoi.vercel.app',
   'http://localhost:5173',
   'http://localhost:3000'
 ];
