@@ -41,6 +41,9 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Handle CORS preflight for all routes
+app.options('*', cors());
+
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/tasks', require('./routes/taskRoutes'));

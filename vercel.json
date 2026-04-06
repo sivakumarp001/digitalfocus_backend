@@ -11,6 +11,5 @@
       "source": "/(.*)",
       "destination": "server.js"
     }
-  ],
-  "trailingSlash": false
+  ]
 }
