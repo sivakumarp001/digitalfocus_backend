@@ -11,13 +11,16 @@ const connectDB = async () => {
   }
 
   try {
+    console.log('🔗 Attempting to connect to MongoDB...');
     const conn = await mongoose.connect(process.env.MONGO_URI, {
-      serverSelectionTimeoutMS: 5000,
+      serverSelectionTimeoutMS: 10000,
+      connectTimeoutMS: 10000,
     });
     isConnected = true;
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
     console.error(`❌ MongoDB Error: ${error.message}`);
+    console.error(`Error Code: ${error.code}`);
     // Do NOT call process.exit(1) — it crashes Vercel serverless functions
   }
 };
