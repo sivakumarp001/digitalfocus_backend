@@ -34,6 +34,8 @@ app.use('/api/daily-tasks', require('./routes/dailyTaskRoutes'));
 
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'OK', time: new Date() }));
+app.get('/api', (req, res) => res.send('API is running...'));
+app.get('/', (req, res) => res.send('API is running...'));
 
 // Error handling
 app.use(notFound);
